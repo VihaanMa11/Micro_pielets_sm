@@ -1,0 +1,145 @@
+import React from 'react';
+import SectionHeader from '../components/SectionHeader';
+import { Flame, Utensils, Zap, Heart, ChefHat } from 'lucide-react';
+
+const Applications = () => {
+    const applications = [
+        {
+            title: "Fried Snacks",
+            icon: <Flame size={32} className="text-accent" />,
+            desc: "Classic fried pellets with superior expansion and oil absorption control.",
+            img: "Fried Snack Bowl"
+        },
+        {
+            title: "Baked Snacks",
+            icon: <ChefHat size={32} className="text-accent" />,
+            desc: "Healthier baked options that retain crunch without excess oil.",
+            img: "Baked Chips"
+        },
+        {
+            title: "Hot-Air Puffing",
+            icon: <Zap size={32} className="text-accent" />,
+            desc: "Ideal for modern hot-air puffing technologies for light, airy snacks.",
+            img: "Puffed Snacks"
+        },
+        {
+            title: "Protein Snacks",
+            icon: <Utensils size={32} className="text-accent" />,
+            desc: "High-protein formulations suitable for fitness and functional food markets.",
+            img: "Protein Bars/Chips"
+        },
+        {
+            title: "Healthy Millet Snacks",
+            icon: <Heart size={32} className="text-accent" />,
+            desc: "Nutrient-rich millet-based snacks for the health-conscious consumer.",
+            img: "Millet Crackers"
+        },
+        {
+            title: "Extruded Chips & Namkeen",
+            icon: <Package size={32} className="text-accent" />, // Using Package as placeholder for Namkeen
+            desc: "Versatile bases for traditional Indian namkeen and extruded chip varieties.",
+            img: "Namkeen Mix"
+        }
+    ];
+
+    return (
+        <div className="page-applications">
+            {/* Hero Banner */}
+            <div style={{
+                height: '300px',
+                backgroundColor: '#111',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                position: 'relative'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: 0, left: 0, width: '100%', height: '100%',
+                    backgroundColor: '#222',
+                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8))',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+                    <span style={{ border: '2px dashed #555', padding: '20px', color: '#777' }}>
+                        [Applications Banner: Variety of Finished Snacks]
+                    </span>
+                </div>
+                <h1 style={{ position: 'relative', zIndex: 1 }}>Snack Applications</h1>
+            </div>
+
+            <section className="section">
+                <div className="container">
+                    <SectionHeader title="Versatile Snack Solutions" subtitle="One pellet, endless possibilities" />
+
+                    <div className="grid grid-3">
+                        {applications.map((app, index) => (
+                            <div key={index} style={{
+                                backgroundColor: 'white',
+                                borderRadius: '8px',
+                                overflow: 'hidden',
+                                boxShadow: '0 4px 10px rgba(0,0,0,0.05)',
+                                border: '1px solid #eee'
+                            }}>
+                                <div style={{
+                                    height: '200px',
+                                    backgroundColor: '#f5f5f5',
+                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                    color: '#888',
+                                    borderBottom: '1px solid #eee'
+                                }}>
+                                    [Image: {app.img}]
+                                </div>
+                                <div style={{ padding: '1.5rem' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
+                                        {app.icon}
+                                        <h3 style={{ fontSize: '1.2rem', margin: 0 }}>{app.title}</h3>
+                                    </div>
+                                    <p style={{ color: '#666' }}>{app.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Processing Compatibility */}
+            <section className="section bg-gray">
+                <div className="container">
+                    <SectionHeader title="Processing Compatibility" subtitle="Engineered for your production lines" />
+                    <div className="grid grid-2" style={{ alignItems: 'center' }}>
+                        <div>
+                            <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem', color: '#555' }}>
+                                Our micro pellets are designed to be compatible with standard industrial frying and processing equipment.
+                                Whether you use continuous fryers, batch fryers, or hot-air poppers, our pellets ensure consistent results every time.
+                            </p>
+                            <ul style={{ listStyle: 'none', display: 'grid', gap: '1rem' }}>
+                                {['Standard Fryers', 'Hot Air Poppers', 'Baking Ovens', 'Microwave Expansion'].map(item => (
+                                    <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: '600', color: 'var(--color-primary)' }}>
+                                        <div style={{ width: '8px', height: '8px', backgroundColor: 'var(--color-accent)', borderRadius: '50%' }}></div>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div style={{
+                            height: '300px',
+                            backgroundColor: 'white',
+                            borderRadius: '8px',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            color: '#888',
+                            border: '2px dashed #ddd'
+                        }}>
+                            [Image Placeholder: Industrial Processing Line]
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+// Helper component for icon
+import { Package } from 'lucide-react';
+
+export default Applications;
