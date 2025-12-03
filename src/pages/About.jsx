@@ -107,23 +107,7 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Export Map Placeholder */}
-            <section className="section bg-gray">
-                <div className="container">
-                    <SectionHeader title="Global Footprint" subtitle="Exporting to over 20+ countries" />
-                    <div style={{
-                        height: '500px',
-                        backgroundColor: 'white',
-                        borderRadius: '8px',
-                        boxShadow: '0 4px 10px rgba(0,0,0,0.05)',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        color: '#888',
-                        border: '2px dashed #ddd'
-                    }}>
-                        [Image Placeholder: World Map Highlighting Export Markets (Middle East, Africa, Europe, Asia)]
-                    </div>
-                </div>
-            </section>
+
         </div>
     );
 };

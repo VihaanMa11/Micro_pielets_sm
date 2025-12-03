@@ -1,12 +1,22 @@
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { CheckCircle, Package } from 'lucide-react';
+import potatoImage from '../assets/potato_micro_pellets.png';
+import cornImage from '../assets/corn_micro_pellets.png';
+import riceImage from '../assets/rice_micro_pellets.png';
+import lentilImage from '../assets/lentil_micro_pellets.png';
+import milletImage from '../assets/millet_micro_pellets.jpg';
+import chickpeaImage from '../assets/chickpea_micro_pellets.jpg';
+import soyaImage from '../assets/soya_micro_pellets.jpg';
+import multigrainImage from '../assets/multigrain_micro_pellets.jpg';
+import headerBg from '../assets/products_header_bg.png';
 
 const Products = () => {
     const productList = [
         {
             id: 'potato',
             name: 'Potato Micro Pellets',
+            image: potatoImage,
             desc: 'High-quality potato-based pellets offering excellent expansion and crisp texture. Ideal for classic salted or flavored snacks.',
             benefits: ['Consistent expansion', 'Low oil absorption', 'Authentic potato taste'],
             applications: ['Fried snacks', '3D snacks', 'Seasoned chips']
@@ -14,6 +24,7 @@ const Products = () => {
         {
             id: 'corn',
             name: 'Corn Micro Pellets',
+            image: cornImage,
             desc: 'Crunchy and flavorful corn pellets, perfect for creating bold, savory snacks popular in international markets.',
             benefits: ['Crunchy texture', 'Golden color', 'Versatile flavoring base'],
             applications: ['Tortilla style chips', 'Puffed snacks', 'Cheese balls']
@@ -21,6 +32,7 @@ const Products = () => {
         {
             id: 'rice',
             name: 'Rice Micro Pellets',
+            image: riceImage,
             desc: 'Light and airy rice pellets that cater to health-conscious consumers. Gluten-free options available.',
             benefits: ['Light texture', 'Easy digestibility', 'Neutral base for seasoning'],
             applications: ['Healthy snacks', 'Asian style crackers', 'Diet snacks']
@@ -28,6 +40,7 @@ const Products = () => {
         {
             id: 'lentil',
             name: 'Lentil Micro Pellets',
+            image: lentilImage,
             desc: 'Protein-rich lentil pellets for the growing "better-for-you" snack segment.',
             benefits: ['High protein', 'Fiber rich', 'Unique savory profile'],
             applications: ['Protein chips', 'Healthy alternatives', 'Kids snacks']
@@ -35,6 +48,7 @@ const Products = () => {
         {
             id: 'millet',
             name: 'Millet Micro Pellets',
+            image: milletImage,
             desc: 'Ancient grain power packed into convenient snack pellets. Capitalize on the global millet trend.',
             benefits: ['Superfood ingredients', 'Nutrient dense', 'Sustainable crop'],
             applications: ['Premium health snacks', 'Ancient grain chips']
@@ -42,6 +56,7 @@ const Products = () => {
         {
             id: 'chickpea',
             name: 'Chickpea Micro Pellets',
+            image: chickpeaImage,
             desc: 'Savory chickpea based pellets, offering a nutty flavor and high nutritional value.',
             benefits: ['Plant-based protein', 'Distinctive taste', 'Global appeal'],
             applications: ['Hummus chips', 'Mediterranean snacks']
@@ -49,6 +64,7 @@ const Products = () => {
         {
             id: 'soya',
             name: 'Soya Micro Pellets',
+            image: soyaImage,
             desc: 'Cost-effective and protein-fortified soya pellets for mass market applications.',
             benefits: ['Economical', 'Protein fortified', 'Good expansion'],
             applications: ['Mass market snacks', 'School feeding programs']
@@ -56,6 +72,7 @@ const Products = () => {
         {
             id: 'multigrain',
             name: 'Multigrain Micro Pellets',
+            image: multigrainImage,
             desc: 'A balanced blend of grains for a complex texture and nutritional profile.',
             benefits: ['Complex carbohydrates', 'Rich texture', 'Premium positioning'],
             applications: ['Gourmet snacks', 'Wholesome chips']
@@ -67,7 +84,9 @@ const Products = () => {
             {/* Hero Banner */}
             <div style={{
                 height: '300px',
-                backgroundColor: '#111',
+                backgroundImage: `url(${headerBg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -77,15 +96,9 @@ const Products = () => {
                 <div style={{
                     position: 'absolute',
                     top: 0, left: 0, width: '100%', height: '100%',
-                    backgroundColor: '#222',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8))',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}>
-                    <span style={{ border: '2px dashed #555', padding: '20px', color: '#777' }}>
-                        [Products Banner: Assorted Micro Pellets]
-                    </span>
-                </div>
-                <h1 style={{ position: 'relative', zIndex: 1 }}>Our Micro Pellet Range</h1>
+                    backgroundColor: 'rgba(0,0,0,0.3)'
+                }}></div>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'white' }}>Our Micro Pellet Range</h1>
             </div>
 
             <section className="section">
@@ -119,9 +132,14 @@ const Products = () => {
                                         border: '1px solid #eee',
                                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                                         color: '#888',
-                                        boxShadow: '0 4px 6px rgba(0,0,0,0.05)'
+                                        boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+                                        overflow: 'hidden'
                                     }}>
-                                        [Image: {product.name}]
+                                        {product.image ? (
+                                            <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        ) : (
+                                            <span>[Image: {product.name}]</span>
+                                        )}
                                     </div>
                                 </div>
 
