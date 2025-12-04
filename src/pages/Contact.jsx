@@ -4,6 +4,7 @@ import { MapPin, Mail, Phone, Clock, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import headerBg from '../assets/common_header_bg.png';
 import './PageStyles.css';
+import SEO from '../components/SEO';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -80,6 +81,12 @@ const Contact = () => {
     };
     return (
         <div className="page-contact">
+            <SEO
+                title="Contact Us | Export Enquiry for Snack Pellets"
+                description="Get in touch with Shareat Foods for bulk export enquiries. Located in Ahmedabad, Gujarat, India. Supplying to Middle East, Africa, and Europe."
+                keywords="Contact Shareat Foods, Export Enquiry, Snack Pellet Supplier Contact, Bulk Order Snacks, Ahmedabad Food Exporter"
+                url="/contact"
+            />
             {/* Hero Banner */}
             <div className="page-banner" style={{
                 backgroundImage: `url(${headerBg})`,

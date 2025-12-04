@@ -4,10 +4,17 @@ import { ShieldCheck, FileCheck, Award, ClipboardCheck } from 'lucide-react';
 
 import headerBg from '../assets/common_header_bg.png';
 import './PageStyles.css';
+import SEO from '../components/SEO';
 
 const Quality = () => {
     return (
         <div className="page-quality">
+            <SEO
+                title="Quality & Certifications | ISO 22000 & GMP Certified"
+                description="Shareat Foods ensures top-tier quality with ISO 22000:2018, GMP, and FSSAI certifications. Rigorous testing for global export standards."
+                keywords="ISO 22000 Certified, GMP Certified, FSSAI Licensed, Food Safety Management, Quality Control Snacks, Export Documentation"
+                url="/quality"
+            />
             {/* Hero Banner */}
             <div className="page-banner" style={{
                 backgroundImage: `url(${headerBg})`,

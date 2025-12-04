@@ -5,6 +5,7 @@ import processingLineImage from '../assets/industrial_processing_line.png';
 import headerBg from '../assets/common_header_bg.png';
 import './Applications.css';
 import './PageStyles.css';
+import SEO from '../components/SEO';
 
 const Applications = () => {
     const applications = [
@@ -48,6 +49,12 @@ const Applications = () => {
 
     return (
         <div className="page-applications">
+            <SEO
+                title="Snack Applications | Fried, Baked & Puffed Snack Solutions"
+                description="Versatile micro pellet applications for fried snacks, baked chips, healthy millet snacks, and protein bars. Compatible with standard processing lines."
+                keywords="Fried Snacks, Baked Chips, Puffed Snacks, Protein Snacks, Millet Snacks, Snack Manufacturing Applications"
+                url="/applications"
+            />
             {/* Hero Banner */}
             <div className="page-banner" style={{
                 backgroundImage: `url(${headerBg})`,

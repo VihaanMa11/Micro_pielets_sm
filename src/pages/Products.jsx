@@ -12,6 +12,7 @@ import multigrainImage from '../assets/multigrain_micro_pellets.jpg';
 import headerBg from '../assets/products_header_bg_v2.png';
 import './Products.css';
 import './PageStyles.css';
+import SEO from '../components/SEO';
 
 const Products = () => {
     const productList = [
@@ -83,6 +84,12 @@ const Products = () => {
 
     return (
         <div className="page-products">
+            <SEO
+                title="Our Products | Potato, Corn, Rice & Lentil Micro Pellets"
+                description="Explore our diverse range of micro pellets including Potato, Corn, Rice, Lentil, Millet, and Multigrain. Perfect for fried and baked snacks."
+                keywords="Potato Pellets, Corn Pellets, Rice Pellets, Lentil Pellets, Millet Snacks, Multigrain Pellets, Fryums Manufacturer"
+                url="/products"
+            />
             {/* Hero Banner */}
             <div className="page-banner" style={{
                 backgroundImage: `url(${headerBg})`,

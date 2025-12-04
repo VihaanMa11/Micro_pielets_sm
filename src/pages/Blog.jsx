@@ -4,6 +4,7 @@ import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 
 import headerBg from '../assets/common_header_bg.png';
 import './PageStyles.css';
+import SEO from '../components/SEO';
 
 const Blog = () => {
     const [activeCategory, setActiveCategory] = useState('All');
@@ -59,6 +60,12 @@ const Blog = () => {
 
     return (
         <div className="page-blog">
+            <SEO
+                title="Industry Insights | Snack Trends & Manufacturing News"
+                description="Stay updated with the latest trends in the snack industry, micro pellet manufacturing, and global export insights from Shareat Foods."
+                keywords="Snack Industry Trends, Food Manufacturing Blog, Export Logistics, Micro Pellet Technology, Healthy Snacking Trends"
+                url="/blog"
+            />
             {/* Hero Banner */}
             <div className="page-banner" style={{
                 backgroundImage: `url(${headerBg})`,

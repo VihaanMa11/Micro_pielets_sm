@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Award, Truck, Package } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 import heroBg from '../assets/home_hero_bg.png';
+import potatoImage from '../assets/potato_micro_pellets.jpg';
+import cornImage from '../assets/corn_micro_pellets.png';
+import riceImage from '../assets/rice_micro_pellets.jpg';
+import lentilImage from '../assets/lentil_micro_pellets.png';
 import './PageStyles.css';
+import SEO from '../components/SEO';
 
 const Home = () => {
     const features = [
@@ -30,14 +35,21 @@ const Home = () => {
     ];
 
     const products = [
-        { name: "Potato Micro Pellets", img: "Potato Pellets" },
-        { name: "Corn Micro Pellets", img: "Corn Pellets" },
-        { name: "Rice Micro Pellets", img: "Rice Pellets" },
-        { name: "Lentil Micro Pellets", img: "Lentil Pellets" }
+        { name: "Potato Micro Pellets", img: potatoImage },
+        { name: "Corn Micro Pellets", img: cornImage },
+        { name: "Rice Micro Pellets", img: riceImage },
+        { name: "Lentil Micro Pellets", img: lentilImage }
     ];
 
     return (
         <div className="page-home">
+            <SEO
+                title="Premium Micro Pellets Manufacturer & Global Exporter"
+                description="Leading manufacturer of fry-ready snack micro pellets in India. Exporting Potato, Corn, Rice & Lentil pellets to Middle East, Europe & Global markets."
+                keywords="Micro Pellets Manufacturer, Snack Pellets India, Fry Ready Pellets, Potato Pellets, Corn Pellets, Snack Exporter Gujarat, Ahmedabad Snack Factory"
+                url="/"
+            />
+
             {/* Hero Section */}
             <section className="hero" style={{
                 backgroundColor: '#111',
@@ -123,14 +135,14 @@ const Home = () => {
                             }} className="product-card-hover">
                                 <div style={{
                                     height: '200px',
-                                    backgroundColor: '#eee',
+                                    backgroundColor: 'white',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     color: '#888',
                                     borderBottom: '4px solid var(--color-accent)'
                                 }}>
-                                    [Image: {product.img}]
+                                    <img src={product.img} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </div>
                                 <div style={{ padding: '1.5rem', backgroundColor: 'white' }}>
                                     <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{product.name}</h3>

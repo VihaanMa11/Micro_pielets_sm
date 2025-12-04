@@ -5,10 +5,17 @@ import factoryImage from '../assets/factory_production.png';
 import headerBg from '../assets/common_header_bg.png';
 import './About.css';
 import './PageStyles.css';
+import SEO from '../components/SEO';
 
 const About = () => {
     return (
         <div className="page-about">
+            <SEO
+                title="About Us | Leading Snack Pellet Manufacturer India"
+                description="Learn about Shareat Foods, a premier snack pellet manufacturer in Ahmedabad, Gujarat. State-of-the-art facility producing high-quality fry-ready pellets."
+                keywords="About Shareat Foods, Snack Manufacturer Gujarat, Food Factory Ahmedabad, Snack Pellet Exporter, Indian Snack Company"
+                url="/about"
+            />
             {/* Hero Banner */}
             <div className="page-banner" style={{
                 backgroundImage: `url(${headerBg})`,
