@@ -152,9 +152,18 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* Map Placeholder */}
-            <section style={{ height: '400px', backgroundColor: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', borderTop: '1px solid #ddd' }}>
-                [Google Map Placeholder: Ahmedabad Location]
+            {/* Google Map */}
+            <section style={{ height: '400px', backgroundColor: '#eee', borderTop: '1px solid #ddd' }}>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58878.85959999999!2d72.2605133!3d22.8778359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e96b9c3aab0fd%3A0x4f95328aec17a0ed!2sShareat%20-%20A.%20Innovative%20Food%20Products%20Limited!5e0!3m2!1sen!2sin!4v1733303514000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Shareat Foods Location"
+                ></iframe>
             </section>
         </div>
     );

@@ -1,6 +1,9 @@
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { Flame, Utensils, Zap, Heart, ChefHat } from 'lucide-react';
+import processingLineImage from '../assets/industrial_processing_line.png';
+import './Applications.css';
+import './PageStyles.css';
 
 const Applications = () => {
     const applications = [
@@ -128,9 +131,10 @@ const Applications = () => {
                             borderRadius: '8px',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             color: '#888',
-                            border: '2px dashed #ddd'
+                            border: '2px dashed #ddd',
+                            overflow: 'hidden'
                         }}>
-                            [Image Placeholder: Industrial Processing Line]
+                            <img src={processingLineImage} alt="Industrial Processing Line" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                     </div>
                 </div>

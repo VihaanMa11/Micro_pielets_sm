@@ -40,15 +40,9 @@ const Header = () => {
                             </li>
                         ))}
                     </ul>
-                    <Link to="/contact" className="btn btn-primary mobile-only" onClick={() => setIsMenuOpen(false)}>
-                        Get Quote
-                    </Link>
                 </nav>
 
                 <div className="header-actions">
-                    <Link to="/contact" className="btn btn-primary desktop-only">
-                        Request Quote
-                    </Link>
                     <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>

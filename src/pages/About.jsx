@@ -1,6 +1,9 @@
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { Target, Eye, Truck, ShieldCheck, Factory } from 'lucide-react';
+import factoryImage from '../assets/factory_production.png';
+import './About.css';
+import './PageStyles.css';
 
 const About = () => {
     return (
@@ -8,7 +11,7 @@ const About = () => {
             {/* Hero Banner */}
             <div style={{
                 height: '300px',
-                backgroundColor: '#111',
+                backgroundColor: '#ff0000ff',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -49,9 +52,10 @@ const About = () => {
                             backgroundColor: '#eee',
                             borderRadius: '8px',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            color: '#888'
+                            color: '#888',
+                            overflow: 'hidden'
                         }}>
-                            [Image: Factory / Production Line]
+                            <img src={factoryImage} alt="Factory Production Line" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                     </div>
                 </div>

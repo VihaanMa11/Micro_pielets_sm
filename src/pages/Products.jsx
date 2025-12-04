@@ -10,6 +10,8 @@ import chickpeaImage from '../assets/chickpea_micro_pellets.jpg';
 import soyaImage from '../assets/soya_micro_pellets.jpg';
 import multigrainImage from '../assets/multigrain_micro_pellets.jpg';
 import headerBg from '../assets/products_header_bg.png';
+import './Products.css';
+import './PageStyles.css';
 
 const Products = () => {
     const productList = [
