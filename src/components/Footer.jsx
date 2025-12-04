@@ -33,11 +33,11 @@ const Footer = () => {
                         <h3>Contact Us</h3>
                         <div className="contact-item">
                             <MapPin size={20} className="text-accent" />
-                            <span>Ahmedabad, Gujarat, India</span>
+                            <span>Block No. 212/2, A Innovative Road,<br /> B/H Intas Pharma Unit 2,<br />Matoda Patia, Ahmedabad, Gujarat 382213</span>
                         </div>
                         <div className="contact-item">
                             <Mail size={20} className="text-accent" />
-                            <a href="mailto:info@shareatfoods.com">info@shareatfoods.com</a>
+                            <a href="mailto:shareatmarketing@gmail.com">shareatmarketing@gmail.com</a>
                         </div>
                         <div className="contact-item">
                             <Phone size={20} className="text-accent" />
@@ -48,9 +48,9 @@ const Footer = () => {
                     <div className="footer-social">
                         <h3>Follow Us</h3>
                         <div className="social-icons">
-                            <a href="#" className="social-icon"><Linkedin size={24} /></a>
-                            <a href="#" className="social-icon"><Facebook size={24} /></a>
-                            <a href="#" className="social-icon"><Instagram size={24} /></a>
+                            <a href="https://www.linkedin.com/company/a-innovative-food-products-limited-shareat/" className="social-icon"><Linkedin size={24} /></a>
+                            <a href="https://www.facebook.com/Shareatfoodsindia" className="social-icon"><Facebook size={24} /></a>
+                            <a href="https://www.instagram.com/shareatfoods/" className="social-icon"><Instagram size={24} /></a>
                         </div>
                     </div>
                 </div>

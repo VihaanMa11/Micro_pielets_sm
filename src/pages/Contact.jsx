@@ -117,7 +117,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Head Office & Factory</h4>
-                                        <p style={{ color: '#666' }}>123 Industrial Estate, Phase IV,<br />Ahmedabad, Gujarat, India - 380001</p>
+                                        <p style={{ color: '#666' }}>Block No. 212/2, A Innovative Road,<br /> B/H Intas Pharma Unit 2,<br />Matoda Patia,, Ahmedabad, Gujarat 382213</p>
                                     </div>
                                 </div>
 
@@ -138,7 +138,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Call Us</h4>
-                                        <p style={{ color: '#666' }}>+91 98765 43210 (Export Division)</p>
+                                        <p style={{ color: '#666' }}>+91 </p>
                                     </div>
                                 </div>
                             </div>
