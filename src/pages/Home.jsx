@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Award, Truck, Package } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
+import heroBg from '../assets/home_hero_bg.png';
+import './PageStyles.css';
 
 const Home = () => {
     const features = [
@@ -44,23 +46,26 @@ const Home = () => {
                 position: 'relative',
                 overflow: 'hidden'
             }}>
-                {/* Banner Image Placeholder */}
+                {/* Hero Background Image */}
                 <div style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: '#222',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    backgroundImage: `url(${heroBg})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                     zIndex: 0
                 }}>
-                    <span style={{ border: '2px dashed #555', padding: '20px', color: '#777' }}>
-                        [Hero Banner Image: Factory + Global Export + Snacks]
-                    </span>
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(0,0,0,0.6)'
+                    }}></div>
                 </div>
 
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
@@ -69,9 +74,9 @@ const Home = () => {
                             Premium Micro Pellets Manufacturer & Global Exporter from India
                         </h1>
                         <p style={{ fontSize: '1.25rem', color: '#ccc', marginBottom: '2.5rem' }}>
-                            Supplying fry-ready snack micro pellets to global FMCG brands across Middle East, Africa, Europe & Asia.
+                            Supplying fry-ready snack micro pellets to global FMCG brands across the Globe.
                         </p>
-                        <div style={{ display: 'flex', gap: '1rem' }}>
+                        <div className="btn-group" style={{ display: 'flex', gap: '1rem' }}>
                             <Link to="/contact" className="btn btn-primary">Request Export Quote</Link>
                             <Link to="/products" className="btn btn-outline">View Products</Link>
                         </div>

@@ -1,5 +1,6 @@
 /* Page Banner/Hero Styles - Mobile Responsive */
-.page-banner {
+.page-banner,
+.hero {
     height: 300px;
     display: flex;
     align-items: center;
@@ -8,9 +9,11 @@
     position: relative;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
-.page-banner h1 {
+.page-banner h1,
+.hero h1 {
     position: relative;
     z-index: 1;
     color: white;
@@ -26,10 +29,35 @@
     height: 100%;
 }
 
+/* Hero section specific (Home page) */
+.hero {
+    padding: 120px 0;
+    min-height: 500px;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #ccc;
+}
+
 /* Tablet and below */
 @media (max-width: 1024px) {
     .page-banner {
         height: 250px;
+    }
+
+    .hero {
+        padding: 80px 0;
+        min-height: 400px;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
     }
 }
 
@@ -43,6 +71,31 @@
         font-size: 1.75rem;
         padding: 0 16px;
     }
+
+    .hero {
+        padding: 60px 0;
+        min-height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+        padding: 0 16px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Stack buttons vertically on mobile */
+    .hero .btn-group {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    .hero .btn {
+        width: 100%;
+    }
 }
 
 /* Small mobile devices */
@@ -54,6 +107,22 @@
     .page-banner h1 {
         font-size: 1.5rem;
         padding: 0 12px;
+    }
+
+    .hero {
+        padding: 40px 0;
+        min-height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        padding: 0 12px;
+        margin-bottom: 1rem !important;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem !important;
     }
 }
 

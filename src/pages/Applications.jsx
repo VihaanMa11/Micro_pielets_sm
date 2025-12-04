@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { Flame, Utensils, Zap, Heart, ChefHat } from 'lucide-react';
 import processingLineImage from '../assets/industrial_processing_line.png';
+import headerBg from '../assets/common_header_bg.png';
 import './Applications.css';
 import './PageStyles.css';
 
@@ -48,27 +49,12 @@ const Applications = () => {
     return (
         <div className="page-applications">
             {/* Hero Banner */}
-            <div style={{
-                height: '300px',
-                backgroundColor: '#111',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                position: 'relative'
+            <div className="page-banner" style={{
+                backgroundImage: `url(${headerBg})`,
+                backgroundRepeat: 'no-repeat'
             }}>
-                <div style={{
-                    position: 'absolute',
-                    top: 0, left: 0, width: '100%', height: '100%',
-                    backgroundColor: '#222',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8))',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}>
-                    <span style={{ border: '2px dashed #555', padding: '20px', color: '#777' }}>
-                        [Applications Banner: Variety of Finished Snacks]
-                    </span>
-                </div>
-                <h1 style={{ position: 'relative', zIndex: 1 }}>Snack Applications</h1>
+                <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'black' }}>Snack Applications</h1>
             </div>
 
             <section className="section">

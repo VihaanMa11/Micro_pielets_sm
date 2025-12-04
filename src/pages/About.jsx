@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { Target, Eye, Truck, ShieldCheck, Factory } from 'lucide-react';
 import factoryImage from '../assets/factory_production.png';
+import headerBg from '../assets/common_header_bg.png';
 import './About.css';
 import './PageStyles.css';
 
@@ -9,27 +10,12 @@ const About = () => {
     return (
         <div className="page-about">
             {/* Hero Banner */}
-            <div style={{
-                height: '300px',
-                backgroundColor: '#ff0000ff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                position: 'relative'
+            <div className="page-banner" style={{
+                backgroundImage: `url(${headerBg})`,
+                backgroundRepeat: 'no-repeat'
             }}>
-                <div style={{
-                    position: 'absolute',
-                    top: 0, left: 0, width: '100%', height: '100%',
-                    backgroundColor: '#222',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8))',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}>
-                    <span style={{ border: '2px dashed #555', padding: '20px', color: '#777' }}>
-                        [About Us Banner: Factory / Global Team]
-                    </span>
-                </div>
-                <h1 style={{ position: 'relative', zIndex: 1 }}>About Shareat Foods</h1>
+                <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'black' }}>About Shareat Foods</h1>
             </div>
 
             {/* Company Overview */}

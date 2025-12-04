@@ -1,15 +1,15 @@
 import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { CheckCircle, Package } from 'lucide-react';
-import potatoImage from '../assets/potato_micro_pellets.png';
+import potatoImage from '../assets/potato_micro_pellets.jpg';
 import cornImage from '../assets/corn_micro_pellets.png';
-import riceImage from '../assets/rice_micro_pellets.png';
+import riceImage from '../assets/rice_micro_pellets.jpg';
 import lentilImage from '../assets/lentil_micro_pellets.png';
 import milletImage from '../assets/millet_micro_pellets.jpg';
 import chickpeaImage from '../assets/chickpea_micro_pellets.jpg';
 import soyaImage from '../assets/soya_micro_pellets.jpg';
 import multigrainImage from '../assets/multigrain_micro_pellets.jpg';
-import headerBg from '../assets/products_header_bg.png';
+import headerBg from '../assets/products_header_bg_v2.png';
 import './Products.css';
 import './PageStyles.css';
 
@@ -84,23 +84,12 @@ const Products = () => {
     return (
         <div className="page-products">
             {/* Hero Banner */}
-            <div style={{
-                height: '300px',
+            <div className="page-banner" style={{
                 backgroundImage: `url(${headerBg})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                position: 'relative'
+                backgroundRepeat: 'no-repeat'
             }}>
-                <div style={{
-                    position: 'absolute',
-                    top: 0, left: 0, width: '100%', height: '100%',
-                    backgroundColor: 'rgba(0,0,0,0.3)'
-                }}></div>
-                <h1 style={{ position: 'relative', zIndex: 1, color: 'white' }}>Our Micro Pellet Range</h1>
+                <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'black' }}>Our Micro Pellet Range</h1>
             </div>
 
             <section className="section">
@@ -134,7 +123,7 @@ const Products = () => {
                                         border: '1px solid #eee',
                                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                                         color: '#888',
-                                        boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+                                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0)',
                                         overflow: 'hidden'
                                     }}>
                                         {product.image ? (

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { MapPin, Mail, Phone, Clock, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import headerBg from '../assets/common_header_bg.png';
+import './PageStyles.css';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -79,27 +81,12 @@ const Contact = () => {
     return (
         <div className="page-contact">
             {/* Hero Banner */}
-            <div style={{
-                height: '300px',
-                backgroundColor: '#111',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                position: 'relative'
+            <div className="page-banner" style={{
+                backgroundImage: `url(${headerBg})`,
+                backgroundRepeat: 'no-repeat'
             }}>
-                <div style={{
-                    position: 'absolute',
-                    top: 0, left: 0, width: '100%', height: '100%',
-                    backgroundColor: '#222',
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8))',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}>
-                    <span style={{ border: '2px dashed #555', padding: '20px', color: '#777' }}>
-                        [Contact Banner: Global Connectivity]
-                    </span>
-                </div>
-                <h1 style={{ position: 'relative', zIndex: 1 }}>Contact Us / Export Enquiry</h1>
+                <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'black' }}>Contact Us / Export Enquiry</h1>
             </div>
 
             <section className="section">
@@ -117,7 +104,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Head Office & Factory</h4>
-                                        <p style={{ color: '#666' }}>Block No. 212/2, A Innovative Road,<br /> B/H Intas Pharma Unit 2,<br />Matoda Patia,, Ahmedabad, Gujarat 382213</p>
+                                        <p style={{ color: '#666' }}>Block No. 212/2, A Innovative Road,<br /> B/H Intas Pharma Unit 2,<br />Matoda Patia,, Ahmedabad, Gujarat 38221</p>
                                     </div>
                                 </div>
 
