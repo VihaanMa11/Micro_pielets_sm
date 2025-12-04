@@ -44,9 +44,9 @@ const Home = () => {
     return (
         <div className="page-home">
             <SEO
-                title="Premium Micro Pellets Manufacturer & Global Exporter"
-                description="Leading manufacturer of fry-ready snack micro pellets in India. Exporting Potato, Corn, Rice & Lentil pellets to Middle East, Europe & Global markets."
-                keywords="Micro Pellets Manufacturer, Snack Pellets India, Fry Ready Pellets, Potato Pellets, Corn Pellets, Snack Exporter Gujarat, Ahmedabad Snack Factory"
+                title="Premium Micropellets Manufacturers & Global Exporter | Shareat Foods"
+                description="Shareat Foods is one of the leading micropellets manufacturers in India. We produce high-quality fry-ready micro pellets including Potato, Corn, Rice & Lentil varieties for global export."
+                keywords="micropellets manufacturers, micro pellets manufacturer, Snack Micro Pellets, micropellets, Snack Pellets India, Fry Ready Pellets, Potato Pellets, Corn Pellets, Snack Exporter Gujarat"
                 url="/"
             />
 

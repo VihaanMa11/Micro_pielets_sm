@@ -50,9 +50,9 @@ const Applications = () => {
     return (
         <div className="page-applications">
             <SEO
-                title="Snack Applications | Fried, Baked & Puffed Snack Solutions"
-                description="Versatile micro pellet applications for fried snacks, baked chips, healthy millet snacks, and protein bars. Compatible with standard processing lines."
-                keywords="Fried Snacks, Baked Chips, Puffed Snacks, Protein Snacks, Millet Snacks, Snack Manufacturing Applications"
+                title="Snack Micro Pellets Applications | Fried, Baked & Puffed Solutions"
+                description="Versatile Snack Micro Pellets applications for fried snacks, baked chips, healthy millet snacks, and protein bars. Compatible with standard processing lines."
+                keywords="Snack Micro Pellets, Fried Snacks, Baked Chips, Puffed Snacks, Protein Snacks, Millet Snacks, Snack Manufacturing Applications"
                 url="/applications"
             />
             {/* Hero Banner */}

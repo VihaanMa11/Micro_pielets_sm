@@ -61,9 +61,9 @@ const Blog = () => {
     return (
         <div className="page-blog">
             <SEO
-                title="Industry Insights | Snack Trends & Manufacturing News"
-                description="Stay updated with the latest trends in the snack industry, micro pellet manufacturing, and global export insights from Shareat Foods."
-                keywords="Snack Industry Trends, Food Manufacturing Blog, Export Logistics, Micro Pellet Technology, Healthy Snacking Trends"
+                title="Snack Micro Pellets Insights | Industry Trends & News"
+                description="Stay updated with the latest trends in the Snack Micro Pellets industry, manufacturing technologies, and global export insights from Shareat Foods."
+                keywords="Snack Micro Pellets Trends, Food Manufacturing Blog, Export Logistics, Micro Pellet Technology, Healthy Snacking Trends"
                 url="/blog"
             />
             {/* Hero Banner */}

@@ -82,9 +82,9 @@ const Contact = () => {
     return (
         <div className="page-contact">
             <SEO
-                title="Contact Us | Export Enquiry for Snack Pellets"
-                description="Get in touch with Shareat Foods for bulk export enquiries. Located in Ahmedabad, Gujarat, India. Supplying to Middle East, Africa, and Europe."
-                keywords="Contact Shareat Foods, Export Enquiry, Snack Pellet Supplier Contact, Bulk Order Snacks, Ahmedabad Food Exporter"
+                title="Contact Us | Export Enquiry for Snack Micro Pellets"
+                description="Get in touch with Shareat Foods for bulk Snack Micro Pellets export enquiries. Located in Ahmedabad, Gujarat, India. Supplying to Middle East, Africa, and Europe."
+                keywords="Snack Micro Pellets Enquiry, Contact Shareat Foods, Export Enquiry, Snack Pellet Supplier Contact, Bulk Order Snacks, Ahmedabad Food Exporter"
                 url="/contact"
             />
             {/* Hero Banner */}

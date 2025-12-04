@@ -11,9 +11,9 @@ const About = () => {
     return (
         <div className="page-about">
             <SEO
-                title="About Us | Leading Snack Pellet Manufacturer India"
-                description="Learn about Shareat Foods, a premier snack pellet manufacturer in Ahmedabad, Gujarat. State-of-the-art facility producing high-quality fry-ready pellets."
-                keywords="About Shareat Foods, Snack Manufacturer Gujarat, Food Factory Ahmedabad, Snack Pellet Exporter, Indian Snack Company"
+                title="About Us | Leading Micropellets Manufacturers India"
+                description="Learn about Shareat Foods, a premier Micropellets Manufacturer in Ahmedabad, Gujarat. State-of-the-art facility producing high-quality fry-ready micro pellets."
+                keywords="micropellets manufacturers, micro pellets manufacturer, About Shareat Foods, Snack Manufacturer Gujarat, Food Factory Ahmedabad, Snack Pellet Exporter"
                 url="/about"
             />
             {/* Hero Banner */}

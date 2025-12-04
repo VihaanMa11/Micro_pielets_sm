@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, url, image, type = 'website', schema }) => {
-    const siteTitle = "Shareat Foods | Premium Micro Pellets Manufacturer & Exporter India";
-    const defaultDescription = "Shareat Foods - Leading manufacturer and exporter of fry-ready snack micro pellets (Potato, Corn, Rice, Lentil) from Ahmedabad, Gujarat, India. Serving global FMCG brands.";
-    const defaultKeywords = "Micro Pellets, Snack Pellets, Fry-ready pellets, Food Manufacturer India, Snack Exporter, Potato Pellets, Corn Pellets, Ahmedabad, Gujarat, Private Label Snacks";
+    const siteTitle = "Shareat Foods | Premium Snack Micro Pellets Manufacturer & Exporter India";
+    const defaultDescription = "Shareat Foods - Leading micropellets manufacturers and exporter of fry-ready Snack Micro Pellets (Potato, Corn, Rice, Lentil) from India. Top-rated micro pellets manufacturer serving global FMCG brands.";
+    const defaultKeywords = "micropellets manufacturers, micro pellets manufacturer, Snack Micro Pellets, micropellets, Micro Pellets, Snack Pellets, Fry-ready pellets, Food Manufacturer India, Snack Exporter, Potato Pellets, Corn Pellets, Private Label Snacks";
     const siteUrl = "https://shareatfoods.com"; // Replace with actual domain
     const defaultImage = "/assets/home_hero_bg.png"; // Replace with actual default image URL
 

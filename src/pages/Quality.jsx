@@ -10,9 +10,9 @@ const Quality = () => {
     return (
         <div className="page-quality">
             <SEO
-                title="Quality & Certifications | ISO 22000 & GMP Certified"
-                description="Shareat Foods ensures top-tier quality with ISO 22000:2018, GMP, and FSSAI certifications. Rigorous testing for global export standards."
-                keywords="ISO 22000 Certified, GMP Certified, FSSAI Licensed, Food Safety Management, Quality Control Snacks, Export Documentation"
+                title="Quality Snack Micro Pellets | ISO 22000 & GMP Certified"
+                description="Shareat Foods ensures top-tier quality Snack Micro Pellets with ISO 22000:2018, GMP, and FSSAI certifications. Rigorous testing for global export standards."
+                keywords="Snack Micro Pellets Quality, ISO 22000 Certified, GMP Certified, FSSAI Licensed, Food Safety Management, Quality Control Snacks, Export Documentation"
                 url="/quality"
             />
             {/* Hero Banner */}

@@ -85,9 +85,9 @@ const Products = () => {
     return (
         <div className="page-products">
             <SEO
-                title="Our Products | Potato, Corn, Rice & Lentil Micro Pellets"
-                description="Explore our diverse range of micro pellets including Potato, Corn, Rice, Lentil, Millet, and Multigrain. Perfect for fried and baked snacks."
-                keywords="Potato Pellets, Corn Pellets, Rice Pellets, Lentil Pellets, Millet Snacks, Multigrain Pellets, Fryums Manufacturer"
+                title="Our Products | Potato, Corn, Rice & Lentil Micropellets"
+                description="Explore our diverse range of Snack Micropellets including Potato, Corn, Rice, Lentil, Millet, and Multigrain. We are a top micro pellets manufacturer for fried and baked snacks."
+                keywords="Snack Micropellets, micropellets, Potato Micropellets, Corn Micropellets, Rice Micropellets, Lentil Micropellets, Millet Snacks, Multigrain Pellets, Fryums Manufacturer"
                 url="/products"
             />
             {/* Hero Banner */}
