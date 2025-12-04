@@ -1,8 +1,81 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { MapPin, Mail, Phone, Clock, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        fullName: '',
+        companyName: '',
+        email: '',
+        phone: '',
+        country: '',
+        productInterest: '',
+        quantity: '',
+        message: ''
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus({ type: '', message: '' });
+
+        // EmailJS configuration
+        const serviceId = 'service_m1ejb7j'; // You'll need to replace this
+        const templateId = 'template_0rpu23d'; // You'll need to replace this
+        const publicKey = '7GSls6gryfzTYBWHJ'; // You'll need to replace this
+
+        try {
+            const templateParams = {
+                to_email: 'shareatmarketing@gmail.com',
+                from_name: formData.fullName,
+                company_name: formData.companyName,
+                from_email: formData.email,
+                phone: formData.phone,
+                country: formData.country,
+                product_interest: formData.productInterest,
+                quantity: formData.quantity,
+                message: formData.message
+            };
+
+            await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+            setSubmitStatus({
+                type: 'success',
+                message: 'Thank you! Your enquiry has been sent successfully. We will get back to you soon.'
+            });
+
+            // Clear form
+            setFormData({
+                fullName: '',
+                companyName: '',
+                email: '',
+                phone: '',
+                country: '',
+                productInterest: '',
+                quantity: '',
+                message: ''
+            });
+        } catch (error) {
+            console.error('Email send error:', error);
+            setSubmitStatus({
+                type: 'error',
+                message: 'Sorry, there was an error sending your enquiry. Please try again or email us directly at shareatmarketing@gmail.com'
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
     return (
         <div className="page-contact">
             {/* Hero Banner */}
@@ -92,38 +165,99 @@ const Contact = () => {
                         {/* Enquiry Form */}
                         <div style={{ backgroundColor: 'white', padding: '2.5rem', borderRadius: '8px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
                             <h3 style={{ marginBottom: '1.5rem' }}>Export Enquiry Form</h3>
-                            <form>
+
+                            {/* Status Message */}
+                            {submitStatus.message && (
+                                <div style={{
+                                    padding: '1rem',
+                                    marginBottom: '1.5rem',
+                                    borderRadius: '4px',
+                                    backgroundColor: submitStatus.type === 'success' ? '#d4edda' : '#f8d7da',
+                                    color: submitStatus.type === 'success' ? '#155724' : '#721c24',
+                                    border: `1px solid ${submitStatus.type === 'success' ? '#c3e6cb' : '#f5c6cb'}`
+                                }}>
+                                    {submitStatus.message}
+                                </div>
+                            )}
+
+                            <form onSubmit={handleSubmit}>
                                 <div className="grid grid-2" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
                                     <div>
-                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Full Name</label>
-                                        <input type="text" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }} placeholder="John Doe" />
+                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Full Name *</label>
+                                        <input
+                                            type="text"
+                                            name="fullName"
+                                            value={formData.fullName}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }}
+                                            placeholder="John Doe"
+                                        />
                                     </div>
                                     <div>
-                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Company Name</label>
-                                        <input type="text" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }} placeholder="Your Company Ltd." />
+                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Company Name *</label>
+                                        <input
+                                            type="text"
+                                            name="companyName"
+                                            value={formData.companyName}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }}
+                                            placeholder="Your Company Ltd."
+                                        />
                                     </div>
                                 </div>
 
                                 <div className="grid grid-2" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
                                     <div>
-                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Email Address</label>
-                                        <input type="email" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }} placeholder="john@company.com" />
+                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Email Address *</label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }}
+                                            placeholder="john@company.com"
+                                        />
                                     </div>
                                     <div>
-                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Phone Number</label>
-                                        <input type="tel" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }} placeholder="+1 234 567 890" />
+                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Phone Number *</label>
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }}
+                                            placeholder="+1 234 567 890"
+                                        />
                                     </div>
                                 </div>
 
                                 <div className="grid grid-2" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
                                     <div>
-                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Country</label>
-                                        <input type="text" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }} placeholder="Target Market" />
+                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Country *</label>
+                                        <input
+                                            type="text"
+                                            name="country"
+                                            value={formData.country}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }}
+                                            placeholder="Target Market"
+                                        />
                                     </div>
                                     <div>
-                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Product Interest</label>
-                                        <select style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }}>
-                                            <option>Select Product</option>
+                                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Product Interest *</label>
+                                        <select
+                                            name="productInterest"
+                                            value={formData.productInterest}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }}
+                                        >
+                                            <option value="">Select Product</option>
                                             <option>Potato Pellets</option>
                                             <option>Corn Pellets</option>
                                             <option>Rice Pellets</option>
@@ -135,16 +269,43 @@ const Contact = () => {
 
                                 <div style={{ marginBottom: '1.5rem' }}>
                                     <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Estimated Quantity</label>
-                                    <input type="text" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }} placeholder="e.g. 1 x 20ft Container per month" />
+                                    <input
+                                        type="text"
+                                        name="quantity"
+                                        value={formData.quantity}
+                                        onChange={handleChange}
+                                        style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd' }}
+                                        placeholder="e.g. 1 x 20ft Container per month"
+                                    />
                                 </div>
 
                                 <div style={{ marginBottom: '2rem' }}>
                                     <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Message / Specific Requirements</label>
-                                    <textarea rows="4" style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd', fontFamily: 'inherit' }} placeholder="Tell us about your requirements..."></textarea>
+                                    <textarea
+                                        rows="4"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ddd', fontFamily: 'inherit' }}
+                                        placeholder="Tell us about your requirements..."
+                                    ></textarea>
                                 </div>
 
-                                <button type="submit" className="btn btn-primary" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px' }}>
-                                    Send Enquiry <Send size={18} />
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary"
+                                    disabled={isSubmitting}
+                                    style={{
+                                        width: '100%',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        gap: '10px',
+                                        opacity: isSubmitting ? 0.7 : 1,
+                                        cursor: isSubmitting ? 'not-allowed' : 'pointer'
+                                    }}
+                                >
+                                    {isSubmitting ? 'Sending...' : 'Send Enquiry'} <Send size={18} />
                                 </button>
                             </form>
                         </div>
