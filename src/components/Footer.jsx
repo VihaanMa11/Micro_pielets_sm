@@ -37,11 +37,11 @@ const Footer = () => {
                         </div>
                         <div className="contact-item">
                             <Mail size={20} className="text-accent" />
-                            <a href="mailto:shareatmarketing@gmail.com">shareatmarketing@gmail.com</a>
+                            <a href="mailto:food@agroup.in">food@agroup.in</a>
                         </div>
                         <div className="contact-item">
                             <Phone size={20} className="text-accent" />
-                            <span>+91 98765 43210</span>
+                            <span>+91 9909999247</span>
                         </div>
                     </div>
 
