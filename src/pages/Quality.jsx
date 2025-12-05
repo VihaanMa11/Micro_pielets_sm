@@ -21,7 +21,7 @@ const Quality = () => {
                 backgroundRepeat: 'no-repeat'
             }}>
                 <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
-                <h1 style={{ position: 'relative', zIndex: 1, color: 'black' }}>Quality & Certifications</h1>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'white' }}>Quality & Certifications</h1>
             </div>
 
             {/* Certifications */}

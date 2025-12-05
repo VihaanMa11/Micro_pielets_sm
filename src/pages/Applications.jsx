@@ -61,7 +61,7 @@ const Applications = () => {
                 backgroundRepeat: 'no-repeat'
             }}>
                 <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
-                <h1 style={{ position: 'relative', zIndex: 1, color: 'black' }}>Snack Applications</h1>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'white' }}>Snack Applications</h1>
             </div>
 
             <section className="section">

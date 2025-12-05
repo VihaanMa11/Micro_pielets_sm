@@ -22,7 +22,7 @@ const About = () => {
                 backgroundRepeat: 'no-repeat'
             }}>
                 <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
-                <h1 style={{ position: 'relative', zIndex: 1, color: 'black' }}>About Shareat Foods</h1>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'white' }}>About Shareat Foods</h1>
             </div>
 
             {/* Company Overview */}

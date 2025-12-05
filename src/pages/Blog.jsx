@@ -72,7 +72,7 @@ const Blog = () => {
                 backgroundRepeat: 'no-repeat'
             }}>
                 <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
-                <h1 style={{ position: 'relative', zIndex: 1, color: 'black' }}>Industry Insights</h1>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'white' }}>Industry Insights</h1>
             </div>
 
             <section className="section">
