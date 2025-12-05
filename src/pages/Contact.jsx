@@ -121,8 +121,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Email Us</h4>
-                                        <p style={{ color: '#666' }}><a href="mailto:info@shareatfoods.com">info@shareatfoods.com</a></p>
-                                        <p style={{ color: '#666' }}><a href="mailto:export@shareatfoods.com">export@shareatfoods.com</a></p>
+                                        <p style={{ color: '#666' }}><a href="mailto:info@shareatfoods.com">food@agroup.in</a></p>
                                     </div>
                                 </div>
 
@@ -132,7 +131,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Call Us</h4>
-                                        <p style={{ color: '#666' }}>+91 </p>
+                                        <p style={{ color: '#666' }}>+91 9909999247 </p>
                                     </div>
                                 </div>
                             </div>
