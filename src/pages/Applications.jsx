@@ -6,6 +6,7 @@ import milletConeImage from '../assets/millet_cone.png';
 import friedSnackImage from '../assets/fried_snack_pellets.png';
 import bakedSnackImage from '../assets/baked_chips.png';
 import puffedSnackImage from '../assets/puffed_snacks.png';
+import namkeenMixImage from '../assets/namkeen_mix.png';
 import headerBg from '../assets/common_header_bg.png';
 import './Applications.css';
 import './PageStyles.css';
@@ -51,7 +52,8 @@ const Applications = () => {
             title: "Extruded Chips & Namkeen",
             icon: <Package size={32} className="text-accent" />, // Using Package as placeholder for Namkeen
             desc: "Versatile bases for traditional Indian namkeen and extruded chip varieties.",
-            img: "Namkeen Mix"
+            img: namkeenMixImage,
+            isImage: true
         }
     ];
 
