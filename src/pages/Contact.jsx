@@ -93,7 +93,7 @@ const Contact = () => {
                 backgroundRepeat: 'no-repeat'
             }}>
                 <div className="page-banner-overlay" style={{ backgroundColor: 'rgba(0,0,0,0.0)' }}></div>
-                <h1 style={{ position: 'relative', zIndex: 1, color: 'white' }}>Contact Us / Export Enquiry</h1>
+                <h1 style={{ position: 'relative', zIndex: 1, color: 'white' }}>Contact Us </h1>
             </div>
 
             <section className="section">
