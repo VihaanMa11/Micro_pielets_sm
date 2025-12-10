@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { Flame, Utensils, Zap, Heart, ChefHat } from 'lucide-react';
 import processingLineImage from '../assets/industrial_processing_line.png';
+import milletConeImage from '../assets/millet_cone.png';
 import headerBg from '../assets/common_header_bg.png';
 import './Applications.css';
 import './PageStyles.css';
@@ -37,7 +38,8 @@ const Applications = () => {
             title: "Healthy Millet Snacks",
             icon: <Heart size={32} className="text-accent" />,
             desc: "Nutrient-rich millet-based snacks for the health-conscious consumer.",
-            img: "Millet Crackers"
+            img: milletConeImage,
+            isImage: true
         },
         {
             title: "Extruded Chips & Namkeen",
@@ -84,7 +86,11 @@ const Applications = () => {
                                     color: '#888',
                                     borderBottom: '1px solid #eee'
                                 }}>
-                                    [Image: {app.img}]
+                                    {app.isImage ? (
+                                        <img src={app.img} alt={app.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    ) : (
+                                        `[Image: ${app.img}]`
+                                    )}
                                 </div>
                                 <div style={{ padding: '1.5rem' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
