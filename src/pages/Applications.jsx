@@ -7,6 +7,7 @@ import friedSnackImage from '../assets/fried_snack_pellets.png';
 import bakedSnackImage from '../assets/baked_chips.png';
 import puffedSnackImage from '../assets/puffed_snacks.png';
 import namkeenMixImage from '../assets/namkeen_mix.png';
+import proteinSnackImage from '../assets/protein_snacks.png';
 import headerBg from '../assets/common_header_bg.png';
 import './Applications.css';
 import './PageStyles.css';
@@ -39,7 +40,8 @@ const Applications = () => {
             title: "Protein Snacks",
             icon: <Utensils size={32} className="text-accent" />,
             desc: "High-protein formulations suitable for fitness and functional food markets.",
-            img: "Protein Bars/Chips"
+            img: proteinSnackImage,
+            isImage: true
         },
         {
             title: "Healthy Millet Snacks",
