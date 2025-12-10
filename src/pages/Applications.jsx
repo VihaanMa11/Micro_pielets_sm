@@ -4,6 +4,7 @@ import { Flame, Utensils, Zap, Heart, ChefHat } from 'lucide-react';
 import processingLineImage from '../assets/industrial_processing_line.png';
 import milletConeImage from '../assets/millet_cone.png';
 import friedSnackImage from '../assets/fried_snack_pellets.png';
+import bakedSnackImage from '../assets/baked_chips.png';
 import headerBg from '../assets/common_header_bg.png';
 import './Applications.css';
 import './PageStyles.css';
@@ -22,7 +23,8 @@ const Applications = () => {
             title: "Baked Snacks",
             icon: <ChefHat size={32} className="text-accent" />,
             desc: "Healthier baked options that retain crunch without excess oil.",
-            img: "Baked Chips"
+            img: bakedSnackImage,
+            isImage: true
         },
         {
             title: "Hot-Air Puffing",
