@@ -7,6 +7,7 @@ import potatoImage from '../assets/potato_micro_pellets.jpg';
 import cornImage from '../assets/corn_micro_pellets.png';
 import riceImage from '../assets/rice_micro_pellets.jpg';
 import lentilImage from '../assets/lentil_micro_pellets.png';
+import exportMapImage from '../assets/global_export_map.png';
 import './PageStyles.css';
 import SEO from '../components/SEO';
 
@@ -181,14 +182,11 @@ const Home = () => {
                         </div>
                         <div style={{
                             height: '400px',
-                            backgroundColor: '#333',
                             borderRadius: '8px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            border: '1px dashed #666'
+                            overflow: 'hidden',
+                            boxShadow: '0 4px 6px rgba(0,0,0,0.3)'
                         }}>
-                            [Image Placeholder: World Map / Export Logistics]
+                            <img src={exportMapImage} alt="Global Export Map" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                         </div>
                     </div>
                 </div>
