@@ -3,6 +3,7 @@ import SectionHeader from '../components/SectionHeader';
 import { Flame, Utensils, Zap, Heart, ChefHat } from 'lucide-react';
 import processingLineImage from '../assets/industrial_processing_line.png';
 import milletConeImage from '../assets/millet_cone.png';
+import friedSnackImage from '../assets/fried_snack_pellets.png';
 import headerBg from '../assets/common_header_bg.png';
 import './Applications.css';
 import './PageStyles.css';
@@ -14,7 +15,8 @@ const Applications = () => {
             title: "Fried Snacks",
             icon: <Flame size={32} className="text-accent" />,
             desc: "Classic fried pellets with superior expansion and oil absorption control.",
-            img: "Fried Snack Bowl"
+            img: friedSnackImage,
+            isImage: true
         },
         {
             title: "Baked Snacks",
