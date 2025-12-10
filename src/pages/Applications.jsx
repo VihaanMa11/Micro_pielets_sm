@@ -5,6 +5,7 @@ import processingLineImage from '../assets/industrial_processing_line.png';
 import milletConeImage from '../assets/millet_cone.png';
 import friedSnackImage from '../assets/fried_snack_pellets.png';
 import bakedSnackImage from '../assets/baked_chips.png';
+import puffedSnackImage from '../assets/puffed_snacks.png';
 import headerBg from '../assets/common_header_bg.png';
 import './Applications.css';
 import './PageStyles.css';
@@ -30,7 +31,8 @@ const Applications = () => {
             title: "Hot-Air Puffing",
             icon: <Zap size={32} className="text-accent" />,
             desc: "Ideal for modern hot-air puffing technologies for light, airy snacks.",
-            img: "Puffed Snacks"
+            img: puffedSnackImage,
+            isImage: true
         },
         {
             title: "Protein Snacks",
