@@ -2,7 +2,7 @@ import React from 'react';
 import SectionHeader from '../components/SectionHeader';
 import { Flame, Utensils, Zap, Heart, ChefHat } from 'lucide-react';
 import processingLineImage from '../assets/industrial_processing_line.png';
-import milletConeImage from '../assets/millet_cone.png';
+import milletConeImage from '../assets/millet_cone.jpg';
 import friedSnackImage from '../assets/fried_snack_pellets.png';
 import bakedSnackImage from '../assets/baked_chips.png';
 import puffedSnackImage from '../assets/puffed_snacks.png';
