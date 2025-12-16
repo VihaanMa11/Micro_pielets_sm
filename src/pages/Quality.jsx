@@ -3,6 +3,7 @@ import SectionHeader from '../components/SectionHeader';
 import { ShieldCheck, FileCheck, Award, ClipboardCheck } from 'lucide-react';
 
 import headerBg from '../assets/common_header_bg.png';
+import qualityLabImage from '../assets/quality_lab_testing.jpg';
 import './PageStyles.css';
 import SEO from '../components/SEO';
 
@@ -86,11 +87,10 @@ const Quality = () => {
                             height: '400px',
                             backgroundColor: 'white',
                             borderRadius: '8px',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            color: '#888',
-                            border: '2px dashed #ddd'
+                            overflow: 'hidden',
+                            boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
                         }}>
-                            [Image Placeholder: Quality Lab / Testing Equipment]
+                            <img src={qualityLabImage} alt="Quality Lab Testing Equipment" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                     </div>
                 </div>
